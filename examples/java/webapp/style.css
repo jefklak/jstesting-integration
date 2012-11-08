@@ -1,0 +1,12 @@
+img {
+	cursor: pointer;
+}
+
+span {
+	font-weight: bold;
+	font-size: 20pt;
+}
+
+.pea {
+	position: relative;
+}

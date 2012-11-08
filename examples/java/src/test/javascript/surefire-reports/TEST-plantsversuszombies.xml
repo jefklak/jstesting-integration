@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="plants versus zombies!" errors="0" tests="0" failures="0" time="0" timestamp="2012-11-05T10:12:00">
+</testsuite>
+<testsuite name="plants versus zombies!.growing plants" errors="0" tests="3" failures="0" time="0.009" timestamp="2012-11-05T10:12:00">
+  <testcase classname="plants versus zombies!.growing plants" name="should be zero in size by default" time="0.007"></testcase>
+  <testcase classname="plants versus zombies!.growing plants" name="should grow once in size when watered just once" time="0"></testcase>
+  <testcase classname="plants versus zombies!.growing plants" name="should grow twice in size when watered twice" time="0"></testcase>
+</testsuite>
+<testsuite name="plants versus zombies!.creating zombies" errors="0" tests="3" failures="0" time="0.003" timestamp="2012-11-05T10:12:00">
+  <testcase classname="plants versus zombies!.creating zombies" name="should not &apos;be dead&apos; when created" time="0.001"></testcase>
+  <testcase classname="plants versus zombies!.creating zombies" name="should have the specified health at creation time" time="0"></testcase>
+  <testcase classname="plants versus zombies!.creating zombies" name="should be dead when health set to zero manually" time="0"></testcase>
+</testsuite>
+<testsuite name="plants versus zombies!.creating zombies.killing zombies with plants, wow!" errors="0" tests="2" failures="0" time="0.002" timestamp="2012-11-05T10:12:00">
+  <testcase classname="plants versus zombies!.creating zombies.killing zombies with plants, wow!" name="should kill a zombie with health 1 after watering the plant once" time="0.002"></testcase>
+  <testcase classname="plants versus zombies!.creating zombies.killing zombies with plants, wow!" name="should damage the zombie by the size of the plant" time="0"></testcase>
+</testsuite>
+</testsuites>

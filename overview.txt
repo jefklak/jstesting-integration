@@ -1,0 +1,47 @@
+-------------------------------------------
+Javascript Unit Testing & Build Integration
+-------------------------------------------
+
+Aandachtspunten:
+=> Nadruk integratie testen in build!
+=> Voorbeelden doorheen de presentatie zelf samen typen & uitvoeren
+=> Zelf phantomjs extracten & uitvoeren in console
+=> Zelf rhino console & debugging laten zien
+
+A] why unit testing in JS isn't very popular
+============================================
+
+1) bad code: 
+	* voorbeeld spaghetti code (typische JS file) geven => voorgeschiedenis JS té flexibel zodat "it works" good enough is
+	* UI + logic never nicely separated with JS
+2) no standard API/Framework like JUnit for Java: QUnit, Jasmine, ... 
+3) no standard for integrating it into your build
+4) no best practices on how to test UI: headful or headless, implicitly (with Webdriver clicks) or explicitly?
+5) async hell?
+
+B] how unit testing should be done properly
+============================================
+
+(All slides contain Jasmine, any other framework will do but has less nice BDD design)
+
+1) for regular javascript modules
+2) for UI testing:
+	* jQuery & HTML
+	* Asynchronous code & unit testing in Jasmine (waitsFor())
+	* ExtJS 4 MVC
+
+C] how to integrate JS tests into your build, or even eclipse
+=============================================================
+
+=> NADRUK OP DIT GEDEELTE PROBEREN TE LEGGEN! (Presentaties genoeg over Js testing)
+
+1) headful: run suite.html using webdriver & assert everything's green using a timeout
+2) headful: use http://code.google.com/p/js-test-driver/ (nog zelf te testen!)
+3) headless with rhino:
+	* use Rhino to evaluate JS
+	* use envjs to simulate the DOM layer in browsers (creates 'window' object) -> leg nadelen uit + demo
+	* combine both & use a custom JUnit Runner! -> works like any other Java class
+4) headless with phantom:
+	* verschil vorige uitleggen: Qt frame met échte Webkit die draait in achtergrond
+	* nadeel: evalueren scripts in aparte sandbox, moeilijk voor feedback
+	* integratie met maven -> generates JUnit XML reports

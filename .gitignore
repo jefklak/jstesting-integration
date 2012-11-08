@@ -1,0 +1,4 @@
+bin/
+eclipsecompiled/
+target/
+examples/.DS_Store

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Plants vs zombies</title>
+<link rel="stylesheet" href="style.css"></link>
+<script type="text/javascript" src="../src/main/javascript/jquery.js"></script>
+<script type="text/javascript" src="../src/main/javascript/module.js"></script>
+<script type="text/javascript" src="../src/main/javascript/ui.js"></script>
+<script type="text/javascript">
+$(UI.init);
+</script>
+</head>
+
+<body>
+
+<div style="float: left;" id="plants">
+<p>Plants - size: <span id="size">x</span></p>
+<img src="plant.png" id="plant" />
+</div>
+
+<div style="float: right;" id="zombies">
+<p>Zombies - health: <span id="health">x</span></p>
+<img src="zombie.png" id="zombie" />
+</div>
+
+<div style="clear: both;" id="tools">
+<p>Tools</p>
+<img src="wateringcan.png" id="can" />
+
+</div>
+
+</body>
+
+</html>

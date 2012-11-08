@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Plants vs zombies</title>
+<link rel="stylesheet" href="style.css"></link>
+<script type="text/javascript" src="../src/main/javascript/jquery.js"></script>
+<script type="text/javascript" src="../src/main/javascript/module.js"></script>
+<script type="text/javascript">
+$(function() {
+	var zombie = Zombies.create(3);
+	var plant = Plants.create();
+
+	function updateHealth() {
+		$("#health").html(zombie.health);
+		if(zombie.isDead()) {
+			$("#zombie").hide("slow");
+		}
+	}
+	function updatePlantSize() {
+		$("#size").html(plant.getSize());
+	}
+	$("#plant").click(function() {
+		plant.shootAt(zombie);
+		updateHealth();
+		
+		$("<img class='pea' src='pea.png'/>")
+			.insertAfter($('#plant'))
+			.animate({
+				left: '+400',
+				opacity: '0'
+			}, 500, function() {
+				$(this).remove();
+			});
+	});
+	$("#can").click(function() {
+		plant.water();
+		updatePlantSize();
+	});
+	$("#zombie").click(updateHealth);
+	updateHealth();
+	updatePlantSize();
+});
+</script>
+
+</head>
+
+<body>
+
+<div style="float: left;" id="plants">
+<p>Plants - size: <span id="size">x</span></p>
+<img src="plant.png" id="plant" />
+</div>
+
+<div style="float: right;" id="zombies">
+<p>Zombies - health: <span id="health">x</span></p>
+<img src="zombie.png" id="zombie" />
+</div>
+
+<div style="clear: both;" id="tools">
+<p>Tools</p>
+<img src="wateringcan.png" id="can" />
+
+</div>
+
+</body>
+
+</html>
